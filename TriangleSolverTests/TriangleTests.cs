@@ -162,5 +162,174 @@ namespace TriangleSolverTests
             Assert.AreEqual(result, actual);
         }
         #endregion
+
+        #region Tests for verifying a zero length for one or more sides. 
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest1()
+        {
+            // Test 1
+            // Arrange
+            var firstSide = 0;
+            var secondSide = 5;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest2()
+        {
+            // Arrange
+            var firstSide = 5;
+            var secondSide = 0;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest3()
+        {
+            // Arrange
+            var firstSide = 5;
+            var secondSide = 6;
+            var thirdSide = 0;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest4()
+        {
+            // Arrange
+            var firstSide = 5;
+            var secondSide = 0;
+            var thirdSide = 0;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest5()
+        {
+            // Arrange
+            var firstSide = 0;
+            var secondSide = 0;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest6()
+        {
+            // Arrange
+            var firstSide = 0;
+            var secondSide = 5;
+            var thirdSide = 0;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingZeroLengthForOneOrMoreSidesTest7()
+        {
+            // Arrange
+            var firstSide = 0;
+            var secondSide = 0;
+            var thirdSide = 0;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Invalid Triangle - a zero has been detected";
+            Assert.AreEqual(result, actual);
+        }
+
+        #endregion
+
+        #region Test for verifying an invalid response (other than a zero length). 
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingAnInvalidResponseTest1()
+        {
+            // Arrange
+            var firstSide = 5;
+            var secondSide = 12;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "INVALID!!";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingAnInvalidResponseTest2()
+        {
+            // Arrange
+            var firstSide = 14;
+            var secondSide = 8;
+            var thirdSide = 5;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "INVALID!!";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingAnInvalidResponseTest3()
+        {
+            // Arrange
+            var firstSide = 6;
+            var secondSide = 4;
+            var thirdSide = 12;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "INVALID!!";
+            Assert.AreEqual(result, actual);
+        }
+
+        #endregion
     }
 }
