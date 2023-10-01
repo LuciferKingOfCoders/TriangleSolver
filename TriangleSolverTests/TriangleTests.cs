@@ -27,5 +27,57 @@ namespace TriangleSolverTests
         }
 
         #endregion
+
+        #region Test for a valid equilateral triangle. 
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidIsoscelesTriangleTest1()
+        {
+            // Arrange
+            var firstSide = 6;
+            var secondSide = 6;
+            var thirdSide = 7;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Isosceles triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidIsoscelesTriangleTest2()
+        {
+            // Arrange
+            var firstSide = 6;
+            var secondSide = 7;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Isosceles triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidIsoscelesTriangleTest3()
+        {
+            // Arrange
+            var firstSide = 7;
+            var secondSide = 6;
+            var thirdSide = 6;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Isosceles triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        #endregion
     }
 }
