@@ -28,7 +28,7 @@ namespace TriangleSolverTests
 
         #endregion
 
-        #region Test for a valid equilateral triangle. 
+        #region Test for a valid isosceles triangle triangle. 
 
         [TestMethod]
         public void AnalyzeTriangle_VerifyingValidIsoscelesTriangleTest1()
@@ -78,6 +78,89 @@ namespace TriangleSolverTests
             Assert.AreEqual(result, actual);
         }
 
+        #endregion
+
+        #region Test for a valid scalene triangle. 
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidScaleneTriangleTest1()
+        {
+            // Arrange
+            var firstSide = 6;
+            var secondSide = 7;
+            var thirdSide = 8;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Scalene triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidScaleneTriangleTest2()
+        {
+            // Arrange
+            var firstSide = 10;
+            var secondSide = 7;
+            var thirdSide = 15;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Scalene triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidScaleneTriangleTest3()
+        {
+            // Arrange
+            var firstSide = 4;
+            var secondSide = 9;
+            var thirdSide = 8;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Scalene triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidScaleneTriangleTest4()
+        {
+            // Arrange
+            var firstSide = 7;
+            var secondSide = 12;
+            var thirdSide = 10;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Scalene triangle";
+            Assert.AreEqual(result, actual);
+        }
+
+        [TestMethod]
+        public void AnalyzeTriangle_VerifyingValidScaleneTriangleTest5()
+        {
+            // Arrange
+            var firstSide = 6;
+            var secondSide = 13;
+            var thirdSide = 9;
+
+            // Act
+            var result = Triangle.AnalyzeTriangle(firstSide, secondSide, thirdSide);
+
+            // Assert
+            var actual = "Scalene triangle";
+            Assert.AreEqual(result, actual);
+        }
         #endregion
     }
 }
